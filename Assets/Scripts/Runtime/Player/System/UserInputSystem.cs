@@ -1,9 +1,11 @@
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
+using VitaliyNull.Runtime.SystemGroups;
 
 namespace VitaliyNull.Runtime.Input
 {
+    [UpdateInGroup(typeof(WriteInputSystemGroup))]
     public partial class UserInputSystem : SystemBase
     {
         private InputSystem_Actions _inputActions;

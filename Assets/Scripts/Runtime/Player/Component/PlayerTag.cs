@@ -1,6 +1,6 @@
 using Unity.Entities;
 
-namespace VitaliyNull.Runtime.Input
+namespace VitaliyNull.Runtime.Movement
 {
     public struct PlayerTag : IComponentData
     {

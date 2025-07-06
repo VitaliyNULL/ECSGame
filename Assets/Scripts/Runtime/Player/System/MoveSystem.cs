@@ -2,10 +2,12 @@ using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
+using VitaliyNull.Runtime.Input;
+using VitaliyNull.Runtime.SystemGroups;
 
-namespace VitaliyNull.Runtime.Input
+namespace VitaliyNull.Runtime.Movement
 {
-    [UpdateAfter(typeof(UserInputSystem))]
+    [UpdateInGroup(typeof(ReadInputSystemGroup))]
     public partial struct MoveSystem : ISystem
     {
         [BurstCompile]
