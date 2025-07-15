@@ -5,6 +5,7 @@ namespace VitaliyNull.Runtime.Enemy
 {
     public struct EnemyMovementData : IComponentData
     {
-        public float2 MovementDirection;
+        public float3 MoveDestination;
+        public bool IsDestinationSet;
     }
 }

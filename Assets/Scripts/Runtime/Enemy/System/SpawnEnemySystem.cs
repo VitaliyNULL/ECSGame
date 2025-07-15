@@ -1,5 +1,4 @@
 using Unity.Burst;
-using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
@@ -8,6 +7,7 @@ using VitaliyNull.Runtime.SystemGroups;
 namespace VitaliyNull.Runtime.Enemy.System
 {
     [UpdateInGroup(typeof(SpawnEntitiesGroup))]
+    [BurstCompile]
     public partial struct SpawnEnemySystem : ISystem
     {
         [BurstCompile]
