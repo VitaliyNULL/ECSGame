@@ -7,6 +7,7 @@ namespace VitaliyNull.Runtime.Enemy
     {
         [field: SerializeField] public float Speed { get; private set; }
         [field: SerializeField] public float SeekingRadius { get; private set; }
+
         public class Baker : Baker<EnemyAuthoring>
         {
             public override void Bake(EnemyAuthoring authoring)
@@ -15,7 +16,10 @@ namespace VitaliyNull.Runtime.Enemy
                 AddComponent(entity, new EnemyTag());
                 AddComponent(entity, new EnemySpeedData() { Speed = authoring.Speed });
                 AddComponent(entity, new EnemyMovementData());
-                AddComponent(entity, new EnemySeekerData());
+                AddComponent(entity, new EnemySeekerData()
+                {
+                    SeekingRadius = authoring.SeekingRadius
+                });
             }
         }
     }

@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <EnemyPrefab>k__BackingField: {fileID: 7374088905408640871, guid: 8122a00d353cf2241b7927cc99d9afeb, type: 3}
   <SpawnInterval>k__BackingField: 2
-  <SpawnRate>k__BackingField: 100
+  <SpawnRate>k__BackingField: 50
   <SpawnBounds>k__BackingField:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 20, y: 2, z: 20}
