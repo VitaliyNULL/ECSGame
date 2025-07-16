@@ -25,7 +25,7 @@ namespace VitaliyNull.Runtime.Enemy.System
                          .WithAll<EnemyTag>().WithEntityAccess())
             {
                 if (movementData.ValueRO.IsDestinationSet) continue;
-                var random = new Random((uint)entity.Index);
+                var random = new Random((uint)(entity.Index * SystemAPI.Time.ElapsedTime * 1000));
                 var direction = random.NextFloat3Direction();
                 var distance = random.NextFloat(5f, 10f);
                 movementData.ValueRW.MoveDestination = transform.ValueRO.Position + direction * distance;
